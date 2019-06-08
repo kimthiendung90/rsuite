@@ -779,7 +779,7 @@ class Dropdown extends React.Component<Props, State> {
         >
           <PickerToggle
             {...unhandled}
-            ref={this.bindToggleRef}
+            innerRef={this.bindToggleRef}
             componentClass={toggleComponentClass}
             onClean={createChainedFunction(this.handleClean, onClean)}
             cleanable={cleanable && !disabled}
