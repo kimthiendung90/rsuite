@@ -74,6 +74,9 @@ export interface PickerBaseProps extends StandardProps, AnimationEventProps {
   /** A picker that can clear values */
   cleanable?: boolean;
 
+  /** A picker can have different sizes */
+  size?: PropTypes.Size;
+
   /** Called when Modal is displayed */
   onOpen?: () => void;
 

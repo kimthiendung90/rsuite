@@ -156,6 +156,7 @@ describe('SelectPicker', () => {
   it('Should call `onChange` callback', done => {
     const doneOp = data => {
       if (data === 'Eugenia') {
+        
         done();
       }
     };

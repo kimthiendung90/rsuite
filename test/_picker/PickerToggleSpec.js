@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactTestUtils from 'react-dom/test-utils';
-import { findDOMNode } from 'react-dom';
 
 import Toggle from '../../src/_picker/PickerToggle';
 import { namespace } from '../';
@@ -58,5 +57,10 @@ describe('Toggle', () => {
   it('Should have a custom className prefix', () => {
     const instance = getDOMNode(<Toggle classPrefix="custom-prefix" />);
     assert.ok(instance.className.match(/\bcustom-prefix\b/));
+  });
+
+  it('Should apply size class', () => {
+    const instance = getDOMNode(<Toggle size="lg">Title</Toggle>);
+    assert.ok(instance.className.match(/\bpicker-toggle-lg\b/));
   });
 });

@@ -1327,7 +1327,7 @@ class CheckTree extends React.Component<Props, States> {
         <div className={classes} style={style} ref={this.bindContainerRef}>
           <PickerToggle
             {...unhandled}
-            ref={this.bindToggleRef}
+            innerRef={this.bindToggleRef}
             onKeyDown={this.handleToggleKeyDown}
             onClean={createChainedFunction(this.handleClean, onClean)}
             componentClass={toggleComponentClass}

@@ -2,9 +2,10 @@
 
 import * as React from 'react';
 import classNames from 'classnames';
+import compose from 'recompose/compose';
 
 import Ripple from '../Ripple';
-import { prefix, getUnhandledProps, defaultProps } from '../utils';
+import { prefix, getUnhandledProps, defaultProps, withStyleProps } from '../utils';
 
 type Props = {
   classPrefix?: string,
@@ -114,8 +115,13 @@ class PickerToggle extends React.Component<Props, State> {
   }
 }
 
-const enhance = defaultProps({
-  classPrefix: 'picker-toggle'
-});
+const enhance = compose(
+  withStyleProps({
+    hasSize: true
+  }),
+  defaultProps({
+    classPrefix: 'picker-toggle'
+  })
+);
 
 export default enhance(PickerToggle);

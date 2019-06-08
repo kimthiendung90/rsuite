@@ -514,7 +514,7 @@ class Dropdown extends React.Component<Props, State> {
         <div className={classes} style={style} tabIndex={-1} role="menu">
           <PickerToggle
             {...unhandled}
-            ref={this.bindToggleRef}
+            innerRef={this.bindToggleRef}
             onClean={createChainedFunction(this.handleClean, onClean)}
             onKeyDown={this.handleKeyDown}
             componentClass={toggleComponentClass}
